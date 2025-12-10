@@ -1,0 +1,28 @@
+@use '../core/variables' as *;
+
+.page__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $space-3 $space-2;
+  background-color: #252525;
+  color: $color-secondary;
+}
+
+.footer__container{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.Adalab__2018 {
+  font-family: $font-main;
+  font-size: 0.9rem;
+  color: $color-secondary;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .page__footer {
+    padding: $space-3 $space-4;
+  }
+}

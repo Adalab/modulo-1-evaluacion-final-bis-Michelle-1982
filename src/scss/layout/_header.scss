@@ -1,0 +1,78 @@
+@use '../core/variables' as *;
+
+.page__header {
+  position: fixed;        // se queda fija arriba
+  top: 0;
+  left: 0;
+  width: 100%;            // siempre ocupa todo el ancho
+  height: 112px;
+  border-bottom: solid 1px var(--pinkish-grey);
+  background-color: var(--white);
+  display: flex;          // alinear contenido
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  z-index: 1000;
+}
+
+/* --------------------------
+   LOGO
+--------------------------- */
+.link__adalab {
+  display: inline-flex;
+  align-items: center;
+}
+
+.link__adalab img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* --------------------------
+   MENÚ
+--------------------------- */
+.menu__nav {               // Asegúrate de usar este nombre en el HTML
+  display: flex;
+  gap: 1rem;
+}
+
+.menu__nav a {
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: 1rem;
+  color: $color-text;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.18s ease;
+}
+
+.menu__nav a:hover {
+  color: $color-primary;
+}
+
+/* --------------------------
+   TABLET
+--------------------------- */
+@media (min-width: $breakpoint-tablet) {
+  .page__header {
+    padding: 1rem 1.5rem;
+    height: 120px;
+  }
+
+  .link__adalab img { height: 50px; }
+  .menu__nav a { font-size: 1.05rem; }
+}
+
+/* --------------------------
+   DESKTOP
+--------------------------- */
+@media (min-width: $breakpoint-desktop) {
+  .page__header {
+    padding: 1.25rem 2rem;
+    height: 130px;
+  }
+
+  .link__adalab img { height: 60px; }
+  .menu__nav a { font-size: 1.1rem; }
+}

@@ -1,0 +1,30 @@
+@use '../core/variables' as *;
+
+// Contenedor general de la página
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+// Contenedor principal (main)
+.page__main {
+  flex: 1;
+  width: 100%;
+  padding: 0;
+  margin-top: 112px;     // altura del header en mobile
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .page__main {
+    margin-top: 120px;
+  }
+}
+
+  @media (min-width: $breakpoint-desktop) {
+  .page__main {
+    margin-top: 130px;
+  }
+}
+
